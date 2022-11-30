@@ -23,8 +23,6 @@ const API_URL = `${window.location.href}api/`;
 const CHANGELOG = [
     "Updated recently",
     "",
-    "Check out the GitHub repository!: github.com/ABCxFF/diepcustom",
-    "Join our Discord server: discord.gg/SyxWdxgHnT :)"
 ];
 
 const ASM_CONSTS = {
