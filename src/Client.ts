@@ -322,7 +322,7 @@ export default class Client {
                     player.setVelocity(0, 0);
                     player.state |= EntityStateFlags.needsCreate | EntityStateFlags.needsDelete;
                 }
-                if ((flags & InputFlags.switchtank) && !(previousFlags & InputFlags.switchtank)) {
+                /**if ((flags & InputFlags.switchtank) && !(previousFlags & InputFlags.switchtank)) {
                     if (this.accessLevel >= config.AccessLevel.BetaAccess || (this.game.arena.arena.values.GUI & GUIFlags.canUseCheats)) {
                         player.name.nametag |= NametagFlags.cheats;
                         this.devCheatsUsed = 1;
@@ -347,7 +347,7 @@ export default class Client {
 
                         player.setTank(tank);
                     }
-                }
+                } */
                 if (flags & InputFlags.levelup) {
                     // If full access, or if the game allows cheating and lvl is < 45, or if the player is a BT access level and lvl is < 45
                     if ((this.accessLevel === config.AccessLevel.FullAccess) || (camera.camera.values.level < 45 && ((this.game.arena.arena.values.GUI & GUIFlags.canUseCheats) || (this.accessLevel === config.AccessLevel.BetaAccess)))) {

@@ -209,7 +209,7 @@ export enum InputFlags {
     rightclick  = 1 << 7,
     levelup     = 1 << 8,
     gamepad     = 1 << 9,
-    switchtank  = 1 << 10,  
+    //switchtank  = 1 << 10,  
     adblock     = 1 << 11
 }
 
