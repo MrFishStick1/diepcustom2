@@ -31,7 +31,7 @@ export enum CommandID {
     gameSetScore = "game_set_score",
     gameTeleport = "game_teleport",
     gameClaim = "game_claim",
-    adminGodmode = "admin_godmode",
+    //adminGodmode = "admin_godmode",
     adminSummon= "admin_summon",
     adminKillAll = "admin_kill_all",
     adminKillEntity = "admin_kill_entity",
@@ -80,11 +80,11 @@ export const commandDefinitions = {
         description: "Attempts claiming an entity of the given type",
         permissionLevel: AccessLevel.BetaAccess
     },
-    admin_godmode: {
+     /**admin_godmode: {
         id: CommandID.adminGodmode,
         description: "Toggles godmode",
-        permissionLevel: AccessLevel.FullAccess
-    },
+        permissionLevel: AccessLevel.Godly
+    }, */
     admin_summon: {
         id: CommandID.adminSummon,
         usage: "[entityName] [?count] [?x] [?y]",
@@ -157,7 +157,7 @@ export const commandCallbacks = {
             return;
         }
     },
-    admin_godmode: (client: Client) => {
+    /**admin_godmode: (client: Client) => {
         if(client.camera?.camera.player?.style?.styleFlags) {
             if(client.camera.camera.player.style.styleFlags & StyleFlags.invincibility) {
                 client.camera.camera.player.style.styleFlags ^= StyleFlags.invincibility;
@@ -165,7 +165,7 @@ export const commandCallbacks = {
                 client.camera.camera.player.style.styleFlags |= StyleFlags.invincibility;
             }
         }
-    },
+    }, */
     admin_summon: (client: Client, entityArg: string, countArg?: string, xArg?: string, yArg?: string) => {
         const count = countArg ? parseInt(countArg) : 1;
         const x = parseInt(xArg || "");

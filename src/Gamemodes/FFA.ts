@@ -17,8 +17,15 @@
 */
 
 import ArenaEntity from "../Native/Arena";
+import { GUIFlags } from "../Const/Enums";
+import GameServer from "../Game";
 
 /**
  * FFA Gamemode Arena
  */
-export default class FFAArena extends ArenaEntity {}
+export default class FFAArena extends ArenaEntity {
+    public constructor(game: GameServer) {
+        super(game);
+        this.arena.values.GUI |= GUIFlags.canUseCheats;
+        }
+}
